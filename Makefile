@@ -7,15 +7,15 @@ all: runme251.sh
 all: runme206.sh
 
 runme31.sh: $(img31)
-	perl -w make_avenir_usb.pl $(img31) >$@
+	perl -w make_avenir_usb.pl $< >$@
 	chmod +x $@
 
 runme251.sh: $(img251)
-	perl -w make_avenir_usb.pl $(img251) >$@
+	perl -w make_avenir_usb.pl $< >$@
 	chmod +x $@
 
 runme206.sh: $(img206)
-	perl -w make_avenir_usb.pl $(img206) >$@
+	perl -w make_avenir_usb.pl $< >$@
 	chmod +x $@
 
 clean:
