@@ -21,6 +21,9 @@ for(@disks){
     print "\n";
 }
 
+print qq/exit/;
+print "\n";
+
 # sudo md5 /dev/disk3
 print qq{sudo md5 $img};
 print "\n";
