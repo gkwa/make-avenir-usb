@@ -11,7 +11,7 @@ close(F);
 
 print "#!/bin/sh\n";
 
-@disks=m{(Mass Storage:.*?\n\n.*?\n\n)}sg;
+@disks=m{(USB DISK:.*?\n\n.*?\n\n)}sg;
 for(@disks){
     my ($disk) = ($_ =~ /BSD Name: (.*)/); #eg: disk3
     print qq{diskutil unmountDisk /dev/$disk};
