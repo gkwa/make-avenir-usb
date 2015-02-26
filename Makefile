@@ -1,16 +1,22 @@
 img31=~/Downloads/avenirC3proto05.img
+img254=~/Downloads/restoreUSB_AvenirMiniVer2__2.5.4.img
 img253=~/Downloads/restoreUSB_AvenirMiniVer2__2.5.3.img
 img252=~/Downloads/restoreUSB_AvenirMiniVer2__2.5.2.img
 img251=~/Downloads/restoreUSB_AvenirMiniVer2__2.5.1.img
 img206=~/Downloads/restoreUSB_AvenirMiniRev2_0.6.img
 
 all: runme31.sh
+all: runme254.sh
 all: runme253.sh
 all: runme252.sh
 all: runme251.sh
 all: runme206.sh
 
 runme31.sh: $(img31)
+	perl -w make_avenir_usb.pl $< >$@
+	chmod +x $@
+
+runme254.sh: $(img254)
 	perl -w make_avenir_usb.pl $< >$@
 	chmod +x $@
 
